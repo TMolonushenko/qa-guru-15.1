@@ -9,14 +9,12 @@ import qa.guru.helpers.Attach;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-
 public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
         DriverConfig.configure();
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-
     }
 
     @AfterEach
